@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Comments</title>
+</head>
+<body>
+
+<div class="header">
+	<h1 class="header__title">Оставьте комментарий</h1>
+	<div class="header__container">
+		<div class="header__element">
+			<h2 class="header__element_title" id="validation-name">Имя: </h2>
+			<input type="text" class="header__username" placeholder="Введите ваше имя" id="name">
+		</div>
+		<div class="header__element">
+			<h2 class="header__element_title" id="validation-text">Комментарий: </h2>
+			<textarea type="text" class="header__comment" placeholder="Введите ваш комментарий" id="text"></textarea>
+		</div>
+		<div class="header__bottom">
+			<div class="header__bottom_element">
+				<div class="header__date">
+					<h2 class="header__date_agreement">Вы хотите, чтобы была видна дата вашего комментария?</h2>
+					<form action="" class="header__date_form">
+						<select id="date-form">
+							<option value="true" id="date-true">Да, я хочу</option>
+							<option value="false" id="date-false">Нет, я против</option>
+						</select>
+					</form>
+					<div class="date__field" id="date-field">
+						<div class="header__date_select" id="date-select">
+							<h2 class="date__text">Выберите дату (по умолчанию будет выбрана сегодняшняя)</h2>
+							<input type="date" class="date__input" id="date" max="2023-03-18">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom_element">
+				<button class="header__btn" id="btn">отправить</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="comment__field" id="comment-field">
+
+		<div class="comment none" id="comment">
+		<div class="comment__container">
+		<div class="comment__name">${comm.name}</div>
+		<div class="comment__date">${comm.date}</div>
+		</div>
+		<div class="comment__container">
+		<div class="comment__text">${comm.text}</div>
+		<div class="comment__actions">
+		<div class="comment__actions_element" id="like">
+		<div class="comment__like">
+		<div class="comment__like_icon">
+		<img src="/images/like_common.svg" alt="" class="comment__like_iconC" id="like-common">
+		</div>
+		<div class="comment__like_icon">
+		<img src="/images/like_active.svg" alt="" class="comment__like_iconA none" id="like-active">
+		</div>
+		<div class="comment__like_counter" id="like-value">0</div>
+		</div>
+		</div>
+		<div class="comment__actions_element" id="delete">
+		<div class="comment__delete" id="delete-comment">
+		<img src="/images/delete_icon.png" alt="">
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+
+</div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
